@@ -1,16 +1,21 @@
 * {
-  border: 0px;
+  margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 body {
+  font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 5fr;
   height: 100vh;
 }
@@ -19,14 +24,25 @@ body {
   border: 2px solid pink;
 }
 
+.iconify {
+  font-size: 3rem;
+  justify-self: center;
+}
+
+.iconify.large {
+  font-size: 5.5rem;
+}
+
 .sidebar {
+  padding-top: 1.5rem;
   grid-row: 1/-1;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 50px repeat(auto-fill, minmax(50px, 100px));
+  grid-template-rows: 50px repeat(auto-fit, minmax(2rem, 4rem));
   color: white;
   background-color: #1892d4;
-  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .sidebar a {
@@ -35,6 +51,10 @@ body {
   font-weight: bolder;
   /* Remove underline by default */
   text-decoration: none;
+}
+
+.sidebar .dashboard-link {
+  font-size: xx-large;
 }
 
 .sidebar a:hover {
