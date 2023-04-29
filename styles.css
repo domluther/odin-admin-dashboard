@@ -23,7 +23,6 @@ body {
 }
 
 .container > div {
-  border: 2px solid grey;
 }
 
 .iconify {
@@ -143,7 +142,7 @@ h2 {
   gap: 1.25rem;
 }
 
-.trending .iconify {
+.iconify.profile {
   color: rgb(241, 152, 120);
   font-size: 4rem;
 }
@@ -156,10 +155,12 @@ h2 {
 .header {
   display: grid;
   grid-template-columns: 3fr 2fr;
+  grid-template-rows: 2fr 3fr;
   /* Vertical centrally aligned */
   align-items: center;
   padding: 0 6rem;
   color: black;
+  box-shadow: 3rem 0.5rem 1rem #cb2020;
 }
 
 button,
@@ -180,4 +181,63 @@ textarea {
   border: none;
   padding: 0.5rem 1.5rem;
   width: 90%;
+}
+
+.profile-info {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  align-items: center;
+}
+
+.content-buttons {
+  justify-self: center;
+}
+
+button {
+  background-color: #1892d4;
+  color: white;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  width: 11rem;
+  margin: 0 1.5rem;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+.welcome > .profile {
+  grid-row-start: span 2;
+  font-size: 10rem;
+  align-self: center;
+}
+
+.welcome > p {
+  align-self: end;
+  font-weight: bold;
+}
+
+.welcome > .username {
+  padding-top: 0.3rem;
+  align-self: start;
+  font-size: 2.4rem;
+}
+
+.profile-info > span {
+  font-weight: bolder;
+  font-size: 2.4rem;
+}
+
+.profile-info > .iconify,
+.profile-info > span {
+  margin: 0 2rem;
+}
+
+.profile-info > .profile {
+  font-size: 5rem;
 }
